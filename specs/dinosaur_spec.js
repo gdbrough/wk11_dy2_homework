@@ -8,6 +8,7 @@ describe("Dinosaur", function(){
       dinosaur1 = new Dinosaur("Tyrannosaurus", 5);
       dinosaur2 = new Dinosaur("Velociraptor", 10);
       dinosaur3 = new Dinosaur("Triceratops", 1);
+      dinosaur4 = new Dinosaur("Velociraptor", 12);
   });
 
   it("should have a type", function(){

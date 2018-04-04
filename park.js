@@ -13,12 +13,19 @@ Park.prototype.removeDinosaur = function (dinoToBeRemoved) {
 
 Park.prototype.removeDinosaurType = function (typeToBeRemoved) {
   // for (dinosaur of this.enclosure){
-  //   if (dinosaur.type = typeToBeRemoved){
+  //   if (dinosaur.type == typeToBeRemoved){
   //     var pos = this.enclosure.indexOf(dinosaur);
   //     this.enclosure.splice(pos, 1);
   //   };
   // };
-  this.enclosure = this.enclosure.filter(dinosaur => dinosaur.type !== typeToBeRemoved);
+  var dinosaursToKeep = []
+  for (dinosaur of this.enclosure) {
+    if (dinosaur.type !== typeToBeRemoved) {
+      dinosaursToKeep.push(dinosaur);
+    }
+  }
+  this.enclosure = dinosaursToKeep;
+  // this.enclosure = this.enclosure.filter(dinosaur => dinosaur.type !== typeToBeRemoved);
 };
 
 

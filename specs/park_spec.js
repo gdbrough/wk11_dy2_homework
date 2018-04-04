@@ -30,10 +30,11 @@ describe("Park", function(){
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
-    assert.deepStrictEqual(park.enclosure, [dinosaur1, dinosaur2, dinosaur3]);
+    park.addDinosaur(dinosaur4);
+    assert.deepStrictEqual(park.enclosure, [dinosaur1, dinosaur2, dinosaur3, dinosaur4]);
     park.removeDinosaurType("Velociraptor");
     assert.deepStrictEqual(park.enclosure, [dinosaur1, dinosaur3]);
-    // assert.strictEqual(park.removeDinosaurType("Velociraptor"), "test");
+    assert.strictEqual(park.enclosure.length, 2);
   });
 
   it("should get all the dinosaurs with an offspring count of more than 2", function(){
